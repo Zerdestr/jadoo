@@ -87,8 +87,10 @@
       min-height: 100vh;
       max-width: 330px;
       overflow: auto;
+    }
 
-      &--active {
+    &--active {
+      @media (max-width: 991px) {
         transform: translateX(0);
       }
     }
