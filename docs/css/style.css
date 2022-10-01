@@ -77,6 +77,22 @@ button {
 @font-face {
   font-family: Poppins;
   font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
   src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -91,26 +107,10 @@ button {
 }
 
 @font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Volkhov;
   font-display: swap;
   src: url("../fonts/Volkhov-Bold.woff2") format("woff2"), url("../fonts/Volkhov-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
-  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -524,12 +524,6 @@ main {
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   pointer-events: all;
-}
-
-.header__wrapper--active {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
 }
 
 .header .burger-menu {
@@ -1989,6 +1983,12 @@ main {
     min-height: 100vh;
     max-width: 330px;
     overflow: auto;
+  }
+
+  .header__wrapper--active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
 
   .header .burger-menu {

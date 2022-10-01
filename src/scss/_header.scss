@@ -87,9 +87,10 @@
       min-height: 100vh;
       max-width: 330px;
       overflow: auto;
-    }
-    &--active {
-      transform: translateX(0);
+
+      &--active {
+        transform: translateX(0);
+      }
     }
   }
 
