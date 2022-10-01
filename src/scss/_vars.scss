@@ -1,0 +1,24 @@
+$orang: #df6951;
+$button: #ff946d;
+$yellow: #f1a501;
+$body: #5e6282;
+$menu: #212832;
+$title: #14183e;
+$dark: #080809;
+$white: #fff;
+$fomr-bg: #dfd7f9;
+$fomr-ph: #39425d;
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}

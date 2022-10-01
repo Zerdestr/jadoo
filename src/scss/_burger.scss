@@ -1,0 +1,55 @@
+.burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $menu;
+    left: 2px;
+    right: 2px;
+    top: 5px;
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $menu;
+    left: 2px;
+    right: 2px;
+    bottom: 5px;
+    transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out;
+  }
+
+  &--active {
+    .burger__line {
+      height: 0;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      top: 14px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      bottom: 14px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    right: 2px;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: $menu;
+    transition: height 0.2s ease-in-out;
+  }
+}

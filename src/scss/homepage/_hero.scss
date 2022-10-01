@@ -1,0 +1,294 @@
+.hero {
+  padding-top: 105px;
+  background-image: url("../img/decore-hero.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50% 90%;
+  margin-bottom: 97px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 70px;
+    padding-top: 85px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 50px;
+    padding-top: 70px;
+  }
+
+  @media (max-width: 564px) {
+    margin-bottom: 30px;
+    padding-top: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 95px 15px;
+
+    @media (max-width: 991px) {
+      padding: 78px 15px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 60px 15px;
+    }
+
+    @media (max-width: 564px) {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+
+    &._active {
+      animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+    }
+
+    @media (max-width: 991px) {
+      width: 665px;
+      height: 665px;
+    }
+
+    @media (max-width: 756px) {
+      width: 535px;
+      height: 535px;
+    }
+
+    @media (max-width: 564px) {
+      width: 340px;
+      height: 340px;
+    }
+  }
+
+  &__contant {
+    background-color: rgba($color: $white, $alpha: 0.5);
+    max-width: max-content;
+    padding: 10px 10px 10px 0;
+    border-radius: 20px;
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: 564px) {
+      max-width: 100%;
+      padding: 30px 0;
+    }
+  }
+
+  &__tagline {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $orang;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    opacity: 0;
+
+    &._active {
+      animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 564px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    color: $title;
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 1.06;
+    font-family: "Volkhov";
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+    max-width: 545px;
+    opacity: 0;
+
+    &._active {
+      animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 64px;
+      max-width: 430px;
+      margin-bottom: 26px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 44px;
+      margin-bottom: 20px;
+      max-width: 340px;
+    }
+
+    @media (max-width: 564px) {
+      font-size: 30px;
+      margin-bottom: 15px;
+      max-width: 230px;
+    }
+
+    & span {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-image: url("../img/title-hero-decore.svg");
+        background-position: left top;
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 175%;
+        bottom: 8%;
+        left: -17%;
+        background-size: cover;
+
+        @media (max-width: 564px) {
+          bottom: -9%;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  &__text {
+    max-width: 477px;
+    margin-bottom: 34px;
+    opacity: 0;
+
+    &._active {
+      animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    }
+
+    @media (max-width: 756px) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 564px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__buttons {
+    opacity: 0;
+    &._active {
+      animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $white;
+    background-color: $yellow;
+    padding: 19px 26px;
+    margin-right: 44px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 35px rgba($color: $yellow, $alpha: 0.15);
+    outline: 2px solid transparent;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, outline 0.2s ease-in-out;
+
+    &:hover {
+      color: $yellow;
+      background-color: $white;
+      outline: 2px solid $yellow;
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $yellow;
+    }
+
+    @media (max-width: 564px) {
+      padding: 10px 13px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+  }
+
+  &__demo {
+    font-size: 17px;
+    line-height: 26px;
+    padding: 13px 0 13px 73px;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 4;
+      width: 52px;
+      height: 52px;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      background-color: $orang;
+
+      @media (max-width: 564px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      left: 27px;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-left: 15px solid $white;
+      border-bottom: 8px solid transparent;
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease-in-out;
+
+      @media (max-width: 564px) {
+        left: 22px;
+      }
+    }
+
+    &:hover {
+      color: $button;
+
+      &::after {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $yellow;
+      border-radius: 10px;
+    }
+
+    &:active {
+      color: $body;
+      outline: transparent;
+    }
+
+    @media (max-width: 564px) {
+      padding: 7px 0 7px 50px;
+    }
+  }
+}
